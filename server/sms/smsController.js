@@ -19,8 +19,9 @@ var generateCode = function(userPhone) {
 };
 
 var weekNumber = function(date) {
+  var millisecondsInADay = 86400000;
   var dayOne = new Date(date.getFullYear(), 0, 1);
-  return Math.ceil(((date - dayOne) / 86400000) / 7);
+  return Math.ceil(((date - dayOne) / millisecondsInADay) / 7);
 };
 
 module.exports = {
